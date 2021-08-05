@@ -15,40 +15,40 @@ export default class Main extends Component {
         this.keyboardListener = this.keyboardListener.bind(this);
     }
 
-    keyboardListener(event){
+    keyboardListener(event) {
         switch(event.key) {
             case "q":
-                this.handleClick(0)
+                this.handleClick(0);
                 break;
             case "w":
-                this.handleClick(1)
+                this.handleClick(1);
                 break;
             case "e":
-                this.handleClick(2)
+                this.handleClick(2);
                 break;
             case "a":
-                this.handleClick(3)
+                this.handleClick(3);
                 break;
             case "s":
-                this.handleClick(4)
+                this.handleClick(4);
                 break;
             case "d":
-                this.handleClick(5)
+                this.handleClick(5);
                 break;
             case "z":
-                this.handleClick(6)
+                this.handleClick(6);
                 break;
             case "x":
-                this.handleClick(7)
+                this.handleClick(7);
                 break;
             case "c":
-                this.handleClick(8)
+                this.handleClick(8);
                 break;
             case "r":
-                this.restart()
+                this.restart();
                 break;
             case "t":
-                this.toggleRandom()
+                this.toggleRandom();
                 break;
             default:
                 break;
@@ -74,7 +74,7 @@ export default class Main extends Component {
 
     toggleRandom() {
         this.setState({
-            randomMode: !this.state.randomMode
+            randomMode: !this.state.randomMode,
         })
     }
 
@@ -82,7 +82,7 @@ export default class Main extends Component {
         let i;
         // generate random i between 0 to 8 until an empty index is obtained
         do {
-            i = Math.floor(Math.random() * 9)
+            i = Math.floor(Math.random() * 9);
         } while (cells[i]);
 
         return i;
@@ -92,12 +92,12 @@ export default class Main extends Component {
         const cells = this.state.cells.slice();
 
         if (this.state.isGameOver) {
-            alert("Game has ended. Click on Start over to play again!")
+            alert("Game has ended. Click on Start over to play again!");
             return;
         }
 
         if (this.state.randomMode) {
-            i = this.generateRandomEmptyIndex(cells)
+            i = this.generateRandomEmptyIndex(cells);
         }
 
         if (cells[i]) {
@@ -107,10 +107,10 @@ export default class Main extends Component {
 
         cells[i] = this.state.blueTurn ? 'Blue' : 'Yellow';
 
-        let isGameOver = getIsGameOver(cells)
+        let isGameOver = getIsGameOver(cells);
         const winner = getWinner(cells);
         if (winner) {
-            isGameOver = true
+            isGameOver = true;
         }
 
         this.setState({
@@ -133,7 +133,7 @@ export default class Main extends Component {
             status = (this.state.blueTurn ? 'Blue' : 'Yellow') + "'s Turn";
         }
         if (randomMode) {
-            status += " (Random)"
+            status += " (Random)";
         }
 
         return (
@@ -155,7 +155,7 @@ export default class Main extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
@@ -188,13 +188,13 @@ function getWinner(cells) {
 
 function getIsGameOver(cells) {
     // check if all cells are filled
-    let isGameOver = true
+    let isGameOver = true;
 
     cells.forEach((cells) => {
         if (cells == null) {
-            isGameOver = false
+            isGameOver = false;
         }
     })
 
-    return isGameOver
+    return isGameOver;
 }

@@ -3,9 +3,9 @@ import Cell from './Cell';
 
 export default class Board extends Component {
     renderCell(i){
-        return <Cell value={this.props.cells[i]}
-                     onClick={()=>this.props.onClick(i)}
-        />
+        return (
+            <Cell value={this.props.cells[i]} onClick={()=>this.props.onClick(i)}/>
+        );
     }
     render() {
         return (
@@ -26,6 +26,6 @@ export default class Board extends Component {
                     {this.renderCell(8)}
                 </div>
             </div>
-        )
+        );
     }
 }
