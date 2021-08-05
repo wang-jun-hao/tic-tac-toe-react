@@ -1,0 +1,112 @@
+/* Cell */
+.cell {
+    float: left;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin: 7px;
+    border: 1px solid lightslategrey;
+
+    background-image: linear-gradient(to top, rgb(113,126,142) 0%, rgb(143,156,172) 100%);
+    background-image: -o-linear-gradient(to top, rgb(113,126,142) 0%, rgb(143,156,172) 100%);
+    background-image: -moz-linear-gradient(to top, rgb(113,126,142) 0%, rgb(143,156,172) 100%);
+    background-image: -webkit-linear-gradient(to top, rgb(113,126,142) 0%, rgb(143,156,172) 100%);
+    background-image: -ms-linear-gradient(to top, rgb(113,126,142) 0%, rgb(143,156,172) 100%);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(113,126,142)),
+            color-stop(1, rgb(143,156,172))
+    );
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 6px 0px slategrey, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 6px 0px slategrey, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: 0px 6px 0px slategrey, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.cell:active {
+    background-image: linear-gradient(to top, rgb(120, 120, 120) 0%, rgb(150, 150, 150) 100%);
+    background-image: -o-linear-gradient(to top, rgb(120, 120, 120) 0%, rgb(150, 150, 150) 100%);
+    background-image: -moz-linear-gradient(to top, rgb(120, 120, 120) 0%, rgb(150, 150, 150) 100%);
+    background-image: -webkit-linear-gradient(to top, rgb(120, 120, 120) 0%, rgb(150, 150, 150) 100%);
+    background-image: -ms-linear-gradient(to top, rgb(120, 120, 120) 0%, rgb(150, 150, 150) 100%);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(120, 120, 120)),
+            color-stop(1, rgb(150, 150, 150))
+    );
+}
+
+.cell.Blue{
+    border: 1px solid royalblue;
+    background-image: linear-gradient(to top, royalblue 0%, dodgerblue 100%);
+    background-image: -o-linear-gradient(to top, royalblue 0%, dodgerblue 100%);
+    background-image: -moz-linear-gradient(to top, royalblue 0%, dodgerblue 100%);
+    background-image: -webkit-linear-gradient(to top, royalblue 0%, dodgerblue 100%);
+    background-image: -ms-linear-gradient(to top, royalblue 0%, dodgerblue 100%);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, royalblue),
+            color-stop(1, dodgerblue)
+    );
+}
+
+.cell.Yellow{
+    border: 1px solid yellowgreen;
+    background-image: linear-gradient(to top, yellowgreen 0%, yellow 100%);
+    background-image: -o-linear-gradient(to top, yellowgreen 0%, yellow 100%);
+    background-image: -moz-linear-gradient(to top, yellowgreen 0%, yellow 100%);
+    background-image: -webkit-linear-gradient(to top, yellowgreen 0%, yellow 100%);
+    background-image: -ms-linear-gradient(to top, yellowgreen 0%, yellow 100%);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, yellowgreen),
+            color-stop(1, yellow)
+    );
+}
+
+/* Main */
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+/* Side Info */
+.sidebar {
+    margin-left: 20px;
+    width: 200px;
+}
+.status {
+    margin-bottom: 20px;
+}
+.sidebar-btn {
+    margin-bottom: 20px;
+}
+.social-prompt {
+    margin-bottom: 10px;
+}
+.share-btn {
+    margin-right: 10px;
+}
+
+.keyboard-instructions {
+    margin-top: 10px;
+    margin-left: 10px;
+}
